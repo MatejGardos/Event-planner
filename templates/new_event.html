@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/main.css">
+    <title>New Event</title>
+</head>
+<body>
+    <div class="container">
+        <form method ="POST" action="/new_event">
+            <h3>Šport:</h3>
+            <input class="input" title="Sport" type="text" name="Sport" required> <br>
+            <h3>Čas:</h3>
+            <input class="input" title="Date" type="date" name="Date" required>
+            <input class="input" title="Time" type="time" name="Time" required> <br>
+            <h3>Meno:</h3>
+            <input class="input" title="Name" type="text" name="Name" required> <br>
+            <h3>Popis:</h3>
+            <input class="input" title="Desc" type="text" name="Desc" required> <br>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        
+        <div>
+            <a href="{{ url_for('menu') }}"><button class="btn">Menu</button></a>
+        </div>
+    </div>
+</body>
+</html>
